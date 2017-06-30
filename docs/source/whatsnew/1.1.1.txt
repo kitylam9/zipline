@@ -109,7 +109,7 @@ Documentation
 
 - Updates the Zipline Beginner Tutorial notebook (:issue:`1707`)
 
-- Includes PipelineEgine, pipeline Term, Factors, and other pipeline things to docs (:issue:`1826`)
+- Includes PipelineEngine, pipeline Term, Factors, and other pipeline things to docs (:issue:`1826`)
 
 Miscellaneous
 ~~~~~~~~~~~~~
