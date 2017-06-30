@@ -8,7 +8,7 @@ Release 1.1.1
 Highlights
 ~~~~~~~~~~
 
-Since the the release of Zipline ``1.1.0``, Quantopian has officially released support for Futures in Zipline, as well as Python 3.5 support.
+After the release of Zipline ``1.1.0``, Quantopian has officially released support for Futures in Zipline, as well as Python 3.5 support.
 
 We also saw breaking changes occur from Yahoo changing their API endpoint, thus preventing users from downloading benchmark data needed for backtests. Since that change, we have swapped out Yahoo-related benchmarking code with references to Google Finance and have removed all deprecated Yahoo code, including the usage of custom Yahoo bundles.
 
