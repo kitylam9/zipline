@@ -1,10 +1,8 @@
-Release
------------
-
-Continue AT: f3086c5
+Release 1.1.1
+-------------
 
 :Release: 1.1.1
-:Date: TBD
+:Date: June 30, 2017
 
 
 Highlights
@@ -35,6 +33,18 @@ Enhancements
 
 - Adds preliminary support for Futures slippage and commission models (:issue:`1738`)
 
+- Fix a bug in cost basis calculation and change all mentions of ``sid`` to ``asset`` (:issue:`1757`)
+
+- Add slippage and commission models for futures (:issue:`1748`)
+
+- Use Python 3.5 in our Dockerfile (:issue:`1806`)
+
+- Allow pipelines to be run in chunks (:issue:`1811`)
+
+- Adds `get_range` to `BenchmarkSource` (:issue:`1815`)
+
+- Adds support for relabeling classifiers in Pipeline (:issue:`1833`)
+
 Experimental Features
 ~~~~~~~~~~~~~~~~~~~~~
 
@@ -53,6 +63,11 @@ Bug Fixes
 
 - Swapped out Yahoo for Google Finance benchmark data (:issue:`1812`)
 
+- Gold and silver futures contracts only traded during certain months (:issue:`1779`)
+
+- Fixes bug in TradingCalendar initialization when we use tzaware datetimes (:issue:`1802`)
+
+- Fixes precision issues on futures prices when rounding (:issue:`1788`)
 
 Performance
 ~~~~~~~~~~~
@@ -67,10 +82,21 @@ Maintenance and Refactorings
 
 - Clears up naming and logic in resample close (:issue:`1728`)
 
+- Use March quarterly cycle for several continuous futures (:issue:`1762`)
+
+- Use better repr for Transaction objects (:issue:`1746`)
+
+- Shorten repr for Asset objects (:issue:`1786`)
+
+- Removes usage of empyrical's information ratio (:issue:`1854`)
+
+
 Build
 ~~~~~
 
 - Adds Python 3.5 packages (:issue:`1701`)
+
+- Swap conda-build arguments so we don't build packages on every CI build (:issue:`1813`)
 
 Documentation
 ~~~~~~~~~~~~~
@@ -83,8 +109,9 @@ Documentation
 
 - Updates the Zipline Beginner Tutorial notebook (:issue:`1707`)
 
+- Includes PipelineEgine, pipeline Term, Factors, and other pipeline things to docs (:issue:`1826`)
+
 Miscellaneous
 ~~~~~~~~~~~~~
 
-- Updates Dockerfile to use Python 3.5
-- Adds a turn key bash script
+- Use csv market data with ``run_algorithm`` so we don't try to download data for tests (:issue:`1793`)
